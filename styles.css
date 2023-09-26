@@ -63,7 +63,7 @@ nav a {
 }
 
 .hero {
-    background-image: url('./image-src/Central-Block-scaled.jpg');
+    background-image: url('Central-Block-scaled.jpg');
     background-size: cover;
     background-position: center;
     color: #003366;
