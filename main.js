@@ -1,0 +1,1 @@
+// all respective funtionalities like form validation button events are done in thier respective html file

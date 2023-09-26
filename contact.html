@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us | VIT-AP University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="container">
+            <a href="index.html">VIT-AP University</a>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="add.html">Academics</a></li>
+                <li><a href="addmision.html">Admissions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <div class="container">
+        <div class="content">
+            <div class="left-side">
+                <div class="address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>Address</div>
+                    <div>Beside AP Secretariat</div>
+                    <div>Near Vijayawada, 522241</div>
+                </div>
+                <div class="phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>Phone</div>
+                    <div>+0098 9893 5647</div>
+                    <div>+0096 3434 5678</div>
+                </div>
+                <div class="email">
+                    <i class="fas fa-envelope"></i>
+                    <div>Email</div>
+                    <div>admission@vitap.ac.in</div>
+                    <div>info@vitap.ac.in</div>
+                </div>
+            </div>
+            <div class="right-side">
+                <div>Send us a message</div>
+                <form id="contact-form">
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <input type="text" id="email" placeholder="Enter your email">
+                    <div class="message-box"></div>
+                    <input type="button" value="Send Now" id="submit-button">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const form = document.getElementById("contact-form");
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const messageBox = document.querySelector(".message-box");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Basic validation
+            if (nameInput.value.trim() === "" || emailInput.value.trim() === "") {
+                messageBox.textContent = "Please fill in all fields.";
+                messageBox.style.color = "red";
+            } else {
+                messageBox.textContent = "Message sent successfully!";
+                messageBox.style.color = "green";
+
+                // You can add code here to send the form data to the server.
+            }
+        });
+    </script>
+</body>
+</html>
